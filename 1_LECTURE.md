@@ -1,5 +1,7 @@
 # DATABASES LECTURE 1 
 - Main topic is **_SQL Recap and Introduction to PostegreSQL_** 
+- Documantation can be find at --> [Lecture 1]([01-recap-sql-postgres-latest.pdf](https://github.com/Kyleann/AGH_Databeses_2/files/11012274/01-recap-sql-postgres-latest.pdf)
+
 
 ## The Relational Data Model
 - Model data as a collection of predicates over a finite sat of variables.
