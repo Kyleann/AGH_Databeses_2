@@ -49,7 +49,7 @@
 
 
 4. Aggregate Functions 
-	- ** Aggregate Functions** combine a set of values into a single one. They include functions such as *SUM, AVG, MIN, MAX, COUNT* etc.
+	- **Aggregate Functions** combine a set of values into a single one. They include functions such as **SUM, AVG, MIN, MAX, COUNT** etc.
 	```SQL
 	SELECT AVG(age) FROM employees;
 	```
@@ -60,7 +60,7 @@
 	```
 
 5. Filtering in Groups
-	- The WHERE clause always applies to individual records. To perform selection on groups, one uses HAVING clause.
+	- The **WHERE** clause always applies to individual records. To perform selection on groups, one uses **HAVING** clause.
 	```SQL
 	SELECT AVG(age), department FROM employees GROUP BY department
 		WHERE age > 30; -- use only people older than 30 for averages
@@ -69,8 +69,8 @@
 	```
 
 6. Inner Joins 
-	- Joins merge **two sets of records**, creating a single result set. 
-	- Inner joins include only records which match both source sets. 
+	- _Joins merge_ **two sets of records**, creating a single result set. 
+	- _Inner joins_ include only records which match both source sets. 
 	```SQL
 	SELECT * FROM weather, cities WHERE weather.city = cities.name;
 	SELECT * FROM weather INNER JOIN cities IN (weather.city = cities.name);
@@ -78,7 +78,7 @@
 	```
 
 7. Outer Joins 
-	- Outer joins take all records from left, right or both source sets:
+	- _Outer joins_ take all records from left, right or both source sets:
 	```SQL
 	SELECT * FROM weather LEFT OUTER JOIN cities ON (weather.city = cities.name);
 	SELECT * FROM weather LEFT JOIN cities ON (weather.city = cities.name);
@@ -128,17 +128,17 @@
 	- The notion of subclassing is difficult to implement in a relational database, and leads to trade-offs.
 	- Possible approaches:
 	    - one table for superclass (and common attributes), one table for each subclass. 
-		- one table for each subclass; common attributes replicated in each one. Must  	   use UNION to obtain a set on superclass level. 
+		- one table for each subclass; common attributes replicated in each one. Must  	   use **UNION** to obtain a set on superclass level. 
 		- one table for all; each row contains attributes of all subclasses (and those of 	   the superclass). This leads to many NULLs. 
 
 
 #PostgreSQL 
 1. PostgreSQL Basics
 	- PostgreSQL is a __relational database management system__ 
-	- Cross-platform & open-source
+	- _Cross-platform & open-source_
 	- Client-server architecture:
 	    - server listens on 5432/tcp by default
-	    - clients use libpq to connect 
+	    - clients use **libpq** to connect 
 
 
 2. PostgreSQL Schema
@@ -173,10 +173,10 @@
 
 5. Using psql: Interactive Shell
 	- Some useful meta-commands: 
-	    - \l – list databases 
-	    - \d – list objects 
-	    - \dE, \di, \dm, \ds, \dt, \dv – list objects of specific type: foreign table, index, materialized view, sequence, table, and view 
-	    - \i – read commands from file
-	    - \q – quit 
+	    - **\l** – list databases 
+	    - **\d** – list objects 
+	    - **\dE, \di, \dm, \ds, \dt, \dv** – list objects of specific type: foreign table, index, materialized view, sequence, table, and view 
+	    - **\i** – read commands from file
+	    - **\q** – quit 
 
 
