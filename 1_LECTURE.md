@@ -50,7 +50,7 @@
 	SELECT * FROM employees WHERE age > 30 ;
 
 
-4. **_Aggregate Functions _**
+4. **_Aggregate Functions_**
 	- **Aggregate Functions** combine a set of values into a single one. They include functions such as **SUM, AVG, MIN, MAX, COUNT** etc.
 	```SQL
 	SELECT AVG(age) FROM employees;
