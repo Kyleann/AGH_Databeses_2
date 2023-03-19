@@ -9,7 +9,7 @@
 ## The SQL Language
 - _SQL stands for Structured Query Language_. 
 
-1. SQL: CREATING RELATIONS
+1. SQL: **Creating Relations**
 	- Relations are created using **CREATE TABLE** function 
 	```SQL
 	CREATE TABLE weather (
