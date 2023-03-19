@@ -166,19 +166,19 @@
 4. Using psql Command-line Switches 
 	- psql [option...] [dbname [username]]
 	- Useful switches: 
-	    - **-d dbname** – specify database name 
-	    - **-h hostname** – specify host to connect to; if omitted, it will connect to local UNIX domain socket specified in the config 
-	    - **-U username** – specify username 
+	    - **-d dbname** –> specify database name 
+	    - **-h hostname** –> specify host to connect to; if omitted, it will connect to local UNIX domain socket specified in the config 
+	    - **-U username** –> specify username 
 	    - **-l** – list databases 
-	    - **-c command** – run specified command and exit 
-	    - **-f filename** – run commands from file and exit
+	    - **-c command** –> run specified command and exit 
+	    - **-f filename** –> run commands from file and exit
 
 5. Using psql: Interactive Shell
 	- Some useful meta-commands: 
-	    - **\l** – list databases 
-	    - **\d** – list objects 
-	    - **\dE, \di, \dm, \ds, \dt, \dv** – list objects of specific type: foreign table, index, materialized view, sequence, table, and view 
-	    - **\i** – read commands from file
-	    - **\q** – quit 
+	    - **\l** –> list databases 
+	    - **\d** –> list objects 
+	    - **\dE, \di, \dm, \ds, \dt, \dv** –> list objects of specific type: foreign table, index, materialized view, sequence, table, and view 
+	    - **\i** –> read commands from file
+	    - **\q** –> quit 
 
 
