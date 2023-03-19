@@ -9,7 +9,7 @@
 ## The SQL Language
 - _SQL stands for Structured Query Language_. 
 
-1. SQL: **Creating Relations**
+1. **_SQL: Creating Relations_**
 	- Relations are created using **CREATE TABLE** function 
 	```SQL
 	CREATE TABLE weather (
@@ -25,7 +25,7 @@
 	DROP TABLE weather ;
 	```
 
-2. SQL: Inserting Data 
+2. **_SQL: Inserting Data_** 
 	- Data is inserted using **INSERT**  statement:
 	```SQL
 	INSERT INTO weather VALUES (‘San Francisco’,46, 50,0.25,’1994-11-27’);
@@ -38,7 +38,7 @@
 	```
 
 
-3. Basic Operations 
+3. **_Basic Operations_** 
 	- **Selection** and **Projection** are two fundamental operations in SQL. 
 	- **Selection** chooses which columns are included in the result set of a **SELECT** query:
 	```SQL
@@ -50,7 +50,7 @@
 	SELECT * FROM employees WHERE age > 30 ;
 
 
-4. Aggregate Functions 
+4. **_Aggregate Functions _**
 	- **Aggregate Functions** combine a set of values into a single one. They include functions such as **SUM, AVG, MIN, MAX, COUNT** etc.
 	```SQL
 	SELECT AVG(age) FROM employees;
@@ -61,7 +61,7 @@
 	SELECT AVG(age), department FROM employees GROUP BY department;
 	```
 
-5. Filtering in Groups
+5. **_Filtering in Groups_**
 	- The **WHERE** clause always applies to individual records. To perform selection on groups, one uses **HAVING** clause.
 	```SQL
 	SELECT AVG(age), department FROM employees GROUP BY department
@@ -70,7 +70,7 @@
 		HAVING AVG(age) > 30; -- only show septs where average is over 30
 	```
 
-6. Inner Joins 
+6. **_Inner Joins_**
 	- _Joins merge_ **two sets of records**, creating a single result set. 
 	- _Inner joins_ include only records which match both source sets. 
 	```SQL
@@ -79,14 +79,14 @@
 	SELECT * FROM weather JOIN cities ON (weather.city = cities.name);
 	```
 
-7. Outer Joins 
+7. **_Outer Joins_**
 	- _Outer joins_ take all records from left, right or both source sets:
 	```SQL
 	SELECT * FROM weather LEFT OUTER JOIN cities ON (weather.city = cities.name);
 	SELECT * FROM weather LEFT JOIN cities ON (weather.city = cities.name);
 	```
 
-8. JOIN Syntax
+8. **_JOIN Syntax_**
 	- The most general syntax uses the ON clause with any logical expression:
 	```SQL
 	SELECT * FROM employees JOIN departments ON
@@ -102,7 +102,7 @@
 	SELECT * FROM employees NATURAL JOIN department;
 	```
 
-9. Set Operations 
+9. **_Set Operations_** 
 	- Query results may be combined using the following operators: 
 	    - UNION: appends results of second query to those of the first one,
 	    - INTERSECT: return all rows that are in both sets,
@@ -110,7 +110,7 @@
 	- All operators remove duplicates unless used with the ALL modifier. 
 
 
-10. Subqueries
+10. **_Subqueries_**
 	- SQL queries may contain subqueries in various places - pay attention attributes and rows expected. Subqueries are often used with the set operators:
 	    - EXISTS: returns true if subquery has at least one row, 
 	    - IN/NOT IN: checks if value belongs/doesn’t belong to set returned by subquery,
@@ -119,14 +119,14 @@
 
 ## Designing Databases 
 
-1. Good practices for Database Design
+1. **_Good practices for Database Design_**
 	- Every real-world object = one entity = one relation.
 	- Every attribute occurs once, with its own object.
 	- Decompose non-atomic attributes.
 	- 1:n relationships: take primary key of “1”, migrate to “n” relation as foreign key. 
 	- m:n relationships: create associative entity, use sum of primary keys from “m” and “n” as primary key. 
 
-2. Implemanting “Inheritance”
+2. **_Implemanting “Inheritance”_**
 	- The notion of subclassing is difficult to implement in a relational database, and leads to trade-offs.
 	- Possible approaches:
 	    - one table for superclass (and common attributes), one table for each subclass. 
@@ -135,7 +135,7 @@
 
 
 #PostgreSQL 
-1. PostgreSQL Basics
+1. **_PostgreSQL Basics_**
 	- PostgreSQL is a __relational database management system__ 
 	- _Cross-platform & open-source_
 	- Client-server architecture:
@@ -143,7 +143,7 @@
 	    - clients use **libpq** to connect 
 
 
-2. PostgreSQL Schema
+2. **_PostgreSQL Schema_**
 	- Creating a schema: 
 	```SQL
 	CREATE SCHEMA my_othe_schema;
@@ -158,12 +158,12 @@
 	SET search_path TO my_other_schema;
 	```
 
-3. PostgreSQL Clients
+3. **_PostgreSQL Clients_**
 	- Collection of __command-line utilities, including **psql** and several helper programs. 
 	- Any application can use **libpq**, usually via some wrapper.
 	- GUI apps: phppgadmin, Adminer, pgAdmin
 
-4. Using psql Command-line Switches 
+4. **_Using psql Command-line Switches_**
 	- psql [option...] [dbname [username]]
 	- Useful switches: 
 	    - **-d dbname** –> specify database name 
@@ -173,7 +173,7 @@
 	    - **-c command** –> run specified command and exit 
 	    - **-f filename** –> run commands from file and exit
 
-5. Using psql: Interactive Shell
+5. **_Using psql: Interactive Shell**_
 	- Some useful meta-commands: 
 	    - **\l** –> list databases 
 	    - **\d** –> list objects 
