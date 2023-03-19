@@ -7,9 +7,9 @@
 - Model data as a collection of predicates over a finite sat of variables.
 
 ## The SQL Language
-- SQL stands for Structured Query Language. 
+- _SQL stands for Structured Query Language_. 
 
-1. SQL: Creating Relations
+1. SQL: CREATING RELATIONS
 	- Relations are created using **CREATE TABLE** function 
 	```SQL
 	CREATE TABLE weather (
